@@ -912,7 +912,6 @@ receive_thread(void *v)
 
         if (TCP_IS_SYNACK(px, parsed.transport_offset)
             || TCP_IS_RST(px, parsed.transport_offset)) {
-
             /* figure out the status */
             status = PortStatus_Unknown;
             if (TCP_IS_SYNACK(px, parsed.transport_offset))
@@ -948,8 +947,7 @@ receive_thread(void *v)
                         6, /* ip proto = tcp */
                         port_them,
                         px[parsed.transport_offset + 13], /* tcp flags */
-                        parsed.ip_ttl,
-                        parsed.mac_src
+                        parsed.ip_ttl
                         );
 
             /*

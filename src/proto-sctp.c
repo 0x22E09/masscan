@@ -168,8 +168,7 @@ handle_sctp(struct Output *out, time_t timestamp,
                         132, /* ip proto = sctp */
                         port_them,
                         0,
-                        parsed->ip_ttl,
-                        parsed->mac_src);
+                        parsed->ip_ttl);
         break;
     case 6: /* abort */
         output_report_status(
@@ -180,8 +179,7 @@ handle_sctp(struct Output *out, time_t timestamp,
                         132, /* ip proto = sctp */
                         port_them,
                         0,
-                        parsed->ip_ttl,
-                        parsed->mac_src);
+                        parsed->ip_ttl);
         break;
     default:
         ;

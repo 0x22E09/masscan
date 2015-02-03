@@ -149,8 +149,7 @@ output_create(const struct Masscan *masscan, unsigned thread_index);
 void output_destroy(struct Output *output);
 
 void output_report_status(struct Output *output, time_t timestamp,
-    int status, unsigned ip, unsigned ip_proto, unsigned port, unsigned reason, unsigned ttl,
-    const unsigned char mac[6]);
+    int status, unsigned ip, unsigned ip_proto, unsigned port, unsigned reason, unsigned ttl);
 
 
 typedef void (*OUTPUT_REPORT_BANNER)(

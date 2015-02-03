@@ -37,7 +37,6 @@ handle_arp(struct Output *out, time_t timestamp, const unsigned char *px,
                     0, /* ip proto */
                     0,
                     0,
-                    0,
-                    parsed->mac_src);
+                    0);
 
 }
